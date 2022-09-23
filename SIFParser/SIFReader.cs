@@ -67,6 +67,11 @@ namespace SIFParser
 
         private void ParseValue(string key, string value, ref SIFFile sIFObj)
         {
+            if (value.ToLower() == "subtotal")
+            {
+                return;
+            }
+
             switch (key)
             {
                 case "pn": // Product Number
